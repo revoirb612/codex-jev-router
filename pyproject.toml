@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-jev-router"
+version = "0.1.0"
+description = "A small, local-first router for Codex CLI and TypeSafe Jev"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Codex Router contributors" }]
+dependencies = ["tomli>=2; python_version < '3.11'"]
+
+[project.scripts]
+codex-router = "codex_router.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["codex_router*"]
