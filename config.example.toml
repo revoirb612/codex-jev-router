@@ -1,0 +1,16 @@
+[models]
+# Select models available to your Codex CLI account.
+# The classifier picks a route; it does not choose arbitrary model names.
+quick = "gpt-5.6-luna"
+deep = "gpt-6-astra"
+
+[routing]
+model = "jev-latest"
+quick_label = "quick"
+deep_label = "deep"
+# If Jev is uncertain, use the more capable Codex model.
+minimum_probability = 0.65
+
+[codex]
+# Restrict Codex to the selected repository. Keep approval behavior in Codex CLI config.
+sandbox = "workspace-write"
